@@ -1,0 +1,442 @@
+/* ======================================= */
+/* 1. Global Styles & Typography */
+/* ======================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f5f7;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #1e88e5; /* Primary Blue Color */
+    padding-bottom: 10px;
+    margin-top: 25px;
+}
+
+/* ======================================= */
+/* 2. Form Inputs, Selects, and Buttons (Refined Look) */
+/* ======================================= */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Refined Look for all Inputs */
+input[type="text"], input[type="password"], textarea, select, input[type="number"], .auth-box input[type="file"], .auth-box select {
+    width: 100%; 
+    padding: 12px; 
+    margin: 8px 0 15px 0;
+    border: 1px solid #c7d0d9; 
+    border-radius: 8px; 
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: #1e88e5; 
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+/* Submission Buttons */
+input[type="submit"], .login-btn {
+    padding: 12px 25px;
+    font-size: 1.05em;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #28a745; /* Green Default */
+    color: white;
+}
+
+input[type="submit"]:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* ======================================= */
+/* 3. Table and Project Cards */
+/* ======================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: bold;
+}
+
+/* Public Project Card Styles (index.php) */
+.project-card {
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #1e88e5; /* Blue accent line */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px); /* Hover par thora upar uthega */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deep shadow on hover */
+}
+
+.project-card h3 {
+    color: #1e88e5;
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.github-link {
+    color: #ff9800; /* Orange color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.img-preview {
+    max-width: 80px;  
+    max-height: 80px;  
+    border-radius: 5px;  
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+/* Admin/Action Buttons */
+.approve-btn {  
+    background-color: #28a745;   
+    color: white;   
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+.reject-btn {   
+    background-color: #dc3545;   
+    color: white;   
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* ======================================= */
+/* 4. Home Page (Index.php) Layout */
+/* ======================================= */
+
+/* Keyframe for subtle title animation */
+@keyframes titleFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.index-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.index-container h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #0d47a1; 
+    animation: titleFadeIn 1s ease-out;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.index-container p {
+    font-size: 1.1em;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* Header/Navigation Styles for Index Page */
+.main-header {
+    background-color: #1e88e5; /* Primary Blue */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-links a:hover {
+    background-color: white;
+    color: #1e88e5;
+}
+
+/* Search Area Styling */
+.search-container {
+    padding: 30px 0;
+    text-align: center; 
+}
+
+.search-form {
+    max-width: 800px; 
+    margin: 0 auto 20px auto;
+    display: flex; 
+    align-items: center; 
+    background-color: transparent; 
+    border: none; 
+    padding: 0;
+}
+
+/* Year Filter Dropdown */
+.search-form select[name="year"] {
+    padding: 18px 10px;
+    border-radius: 12px;
+    margin-right: 15px; 
+    width: 150px; 
+    font-size: 1em;
+}
+
+/* Search Input Field */
+.search-form input[type="text"] {
+    padding: 18px 25px; 
+    font-size: 1.15em;
+    border: 1px solid #ddd; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s;
+    flex-grow: 1; 
+    margin-right: 15px;
+}
+
+/* Search Button */
+.search-form input[type="submit"] {
+    padding: 18px 30px; 
+    border-radius: 12px;
+    background-color: #007bff; 
+    color: white;
+    font-weight: 700;
+}
+
+/* Filter Tag Buttons */
+.filter-tags {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.filter-tags a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #4a4a4a;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px; 
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-tags a:hover {
+    background-color: #1e88e5;
+    color: white;
+    border-color: #1e88e5;
+}
+
+
+/* ======================================= */
+/* 5. Login/Registration Page Styles */
+/* ======================================= */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; 
+}
+
+.auth-box {
+    width: 450px; 
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.auth-box h2 {
+    color: #1e88e5; 
+    margin-bottom: 25px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.auth-box label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Login Specific Styles */
+.login-box {
+    width: 380px; 
+    padding: 30px;
+}
+
+.login-btn-link {
+    display: block;
+    margin-top: 15px;
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.login-btn {
+    flex-grow: 1;
+    margin: 0 5px;
+    color: white; /* Important for button text color */
+}
+
+#student_submit {  
+    background-color: #1e88e5; /* Blue */
+}
+
+#admin_submit {  
+    background-color: #d32f2f; /* Dark Red */
+}
+
+.login-btn.active-btn {
+    border: 3px solid #2c3e50; 
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#admin_mode_text {
+    background-color: #fff3cd; 
+    color: #856404; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: 1px solid #ffeeba;
+    font-size: 0.9em;
+}
+
+
+/* ======================================= */
+/* 6. Dashboard Sidebar Styles (admin_nav, senior_nav) */
+/* ======================================= */
+.admin-main, .senior-main { 
+    display: flex; 
+    min-height: 100vh; 
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+    width: 250px;
+    background-color: #2c3e50; /* Darker blue/grey for admin */
+    color: white;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+.admin-sidebar h3 { color: #fff; border-bottom: 2px solid #5a7082; padding-bottom: 10px; }
+.admin-sidebar a {
+    color: #aebecd;
+    text-decoration: none;
+    display: block;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.admin-sidebar a:hover, .admin-sidebar .active {
+    color: white;
+    background-color: #3f5971;
+}
+
+/* Senior Sidebar */
+.senior-sidebar {
+    width: 250px;
+    background-color: #4a8069; /* Slightly different color for senior, like a dark green */
+    color: white;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+.senior-sidebar h3 { color: #fff; border-bottom: 2px solid #77a08a; padding-bottom: 10px; }
+.senior-sidebar a {
+    color: #d1e2da;
+    text-decoration: none;
+    display: block;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.senior-sidebar a:hover, .senior-sidebar .active {
+    color: white;
+    background-color: #5c977b;
+}
+
+.admin-content, .senior-content {
+    flex-grow: 1; 
+    padding: 20px;
+    background-color: #f8f9fa;
+}
